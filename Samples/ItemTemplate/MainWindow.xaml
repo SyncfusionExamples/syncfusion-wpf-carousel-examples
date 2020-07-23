@@ -1,0 +1,34 @@
+﻿<Window x:Class="ItemTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ItemTemplate"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Carousel - ItemTemplate" Height="650" Width="900">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <syncfusion:Carousel ItemsSource="{Binding HeaderCollection}"
+                             ScaleFraction="0.5"
+                             Name="carousel" >
+            <syncfusion:Carousel.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Ellipse Width="200" Height="100" 
+                                 Stroke="Green" 
+                                 StrokeThickness="4"
+                                 Fill="Yellow"/>
+                        <TextBlock HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   Text="{Binding Header}"/>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:Carousel.ItemTemplate>
+        </syncfusion:Carousel>
+    </Grid>
+
+</Window>

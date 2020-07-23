@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselItem-Selection", "CarouselItem-Selection.csproj", "{2551CB5B-542B-4449-83D8-4D77DBA45E10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2551CB5B-542B-4449-83D8-4D77DBA45E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2551CB5B-542B-4449-83D8-4D77DBA45E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2551CB5B-542B-4449-83D8-4D77DBA45E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2551CB5B-542B-4449-83D8-4D77DBA45E10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F474E57A-D6CA-4995-8394-A24AD29ECBC9}
+	EndGlobalSection
+EndGlobal
