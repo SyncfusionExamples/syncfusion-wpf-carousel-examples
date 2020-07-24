@@ -8,10 +8,10 @@ This repository contains the samples that demonstrate the functionalities of Car
   <td><a href="Samples/CarouselItem-Selection">Populate Carousel Item</a></td>
   <td><a href="Samples/Binding">Binding Carousel items</a></td>
   <td><a href="Samples/StandardPath">Change item Radius</a></td>
-  <td><a href="Samples/StandardPath">Rotation & Opacity support in Standard view</a>
-  <td><a href="Samples/StandardPath">Scaling & Skewing support in Standard view</a></td>
+  <td><a href="Samples/StandardPath">Rotation & Opacity support in Standard view</a> 
  </tr>
  <tr>
+  <td><a href="Samples/StandardPath">Scaling & Skewing support in Standard view</a></td>
   <td><a href="Samples/CustomPath">Rotation & Opacity support in custom view</a></td>
   <td><a href="Samples/CustomPath">Scaling & Skewing support in custom view</a></td>
   <td><a href="Samples/CustomPath">Item per page</a></td>
