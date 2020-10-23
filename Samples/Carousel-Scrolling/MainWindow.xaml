@@ -15,7 +15,9 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <syncfusion:Carousel ItemsPerPage="5" 
+        <syncfusion:Carousel ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                             ItemsPerPage="5" 
                              EnableLooping="{Binding EnableLooping, Mode=TwoWay}"
                              VisualMode="{Binding VisualMode, Mode=TwoWay}"
                              Width="400" 
