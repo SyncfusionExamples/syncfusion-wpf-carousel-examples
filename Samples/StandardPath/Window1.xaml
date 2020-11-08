@@ -97,6 +97,10 @@
                              ItemsSource="{Binding ItemsCollection}"
                              VerticalAlignment="Center" 
                              HorizontalAlignment="Center" 
+                             OpacityEnabled="{Binding OpacityEnabled}"
+                             SkewAngleXEnabled="{Binding SkewAngleXEnabled}"
+                             SkewAngleYEnabled="{Binding SkewAngleYEnabled}"
+                             ScalingEnabled="{Binding ScalingEnabled}"                             
                              OpacityFraction="{Binding OpacityFraction}"
                              SkewAngleXFraction="{Binding SkewAngleXFraction}"
                              SkewAngleYFraction="{Binding SkewAngleYFraction}"                    
@@ -119,6 +123,9 @@
                   VerticalAlignment="Stretch" 
                   Margin="5">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -176,22 +183,17 @@
                                     Grid.Row="2" Grid.Column="1"
                                     MaxValue="360"  />
 
-                <TextBlock Margin="3" 
-                           Grid.Row="3"
-                           Text ="Scale Fraction"/>
-                <syncfusion:UpDown Value="{Binding ScaleFraction,Mode=TwoWay}"
-                                   MaxValue="1" 
-                                   Margin="3"  
-                                   MinValue="0"
-                                   Step="0.1"  
-                                   Grid.Row="3" 
-                                   Grid.Column="1" />
+                <TextBlock Margin="3"
+                           Grid.Row="3" 
+                           Text ="Enable Scaling" />
+                <CheckBox  IsChecked="{Binding ScalingEnabled,Mode=TwoWay}" 
+                           Margin="3"
+                           Grid.Row="3" Grid.Column="1" />
 
                 <TextBlock Margin="3" 
                            Grid.Row="4"
-                           Text ="Opacity Fraction"/>
-                <syncfusion:UpDown Value="{Binding OpacityFraction,Mode=TwoWay}" 
-                                   ZeroColor="Black"
+                           Text ="Scale Fraction"/>
+                <syncfusion:UpDown Value="{Binding ScaleFraction,Mode=TwoWay}"
                                    MaxValue="1" 
                                    Margin="3"  
                                    MinValue="0"
@@ -199,8 +201,34 @@
                                    Grid.Row="4" 
                                    Grid.Column="1" />
 
+                <TextBlock Margin="3"
+                           Grid.Row="5" 
+                           Text ="Enable Opacity" />
+                <CheckBox  IsChecked="{Binding OpacityEnabled,Mode=TwoWay}" 
+                           Margin="3"
+                           Grid.Row="5" Grid.Column="1" />
+
                 <TextBlock Margin="3" 
-                           Grid.Row="5"
+                           Grid.Row="6"
+                           Text ="Opacity Fraction"/>
+                <syncfusion:UpDown Value="{Binding OpacityFraction,Mode=TwoWay}" 
+                                   ZeroColor="Black"
+                                   MaxValue="1" 
+                                   Margin="3"  
+                                   MinValue="0"
+                                   Step="0.1"  
+                                   Grid.Row="6" 
+                                   Grid.Column="1" />
+
+                <TextBlock Margin="3"
+                           Grid.Row="7" 
+                           Text ="SkewAngle X Enabled" />
+                <CheckBox  IsChecked="{Binding SkewAngleXEnabled,Mode=TwoWay}" 
+                           Margin="3"
+                           Grid.Row="7" Grid.Column="1" />
+
+                <TextBlock Margin="3" 
+                           Grid.Row="8"
                            Text ="SkewAngle X Fraction"/>
                 <syncfusion:UpDown Value="{Binding SkewAngleXFraction,Mode=TwoWay}" 
                                    ZeroColor="Black"
@@ -209,11 +237,18 @@
                                    Margin="3"  
                                    MinValue="0"
                                    Step="1"  
-                                   Grid.Row="5" 
+                                   Grid.Row="8" 
                                    Grid.Column="1" />
 
+                <TextBlock Margin="3"
+                           Grid.Row="9" 
+                           Text ="SkewAngle Y Enabled" />
+                <CheckBox  IsChecked="{Binding SkewAngleYEnabled,Mode=TwoWay}" 
+                           Margin="3"
+                           Grid.Row="9" Grid.Column="1" />
+
                 <TextBlock Margin="3" 
-                           Grid.Row="6"
+                           Grid.Row="10"
                            Text ="SkewAngle Y Fraction"/>
                 <syncfusion:UpDown Value="{Binding SkewAngleYFraction,Mode=TwoWay}" 
                                    NumberDecimalDigits="0"
@@ -222,18 +257,18 @@
                                    Margin="3"  
                                    MinValue="0"
                                    Step="1"  
-                                   Grid.Row="6" 
+                                   Grid.Row="10" 
                                    Grid.Column="1" />
 
                 <TextBlock Margin="3"
-                           Grid.Row="7" 
-                           Text ="Rotation Animation" />
+                           Grid.Row="11" 
+                           Text ="Enable Rotation Animation" />
                 <CheckBox  IsChecked="{Binding EnableRotationAnimation,Mode=TwoWay}" 
                            Margin="3"
-                           Grid.Row="7" Grid.Column="1" />
+                           Grid.Row="11" Grid.Column="1" />
 
                 <TextBlock Margin="3"
-                           Grid.Row="8" 
+                           Grid.Row="12" 
                            Text ="Rotation Speed(ms)" />
                 <syncfusion:UpDown  TextAlignment="Left" 
                                     Value="{Binding RotationSpeed,Mode=TwoWay}" 
@@ -243,21 +278,21 @@
                                     Margin="3"
                                     MaxValue="500" 
                                     Step ="10"
-                                    Grid.Row="8" Grid.Column="1" />
+                                    Grid.Row="12" Grid.Column="1" />
 
                 <TextBlock Margin="3"
-                           Grid.Row="9" 
+                           Grid.Row="13" 
                            Text ="Background" />
                 <syncfusion:ColorPicker Brush="{Binding Background,Mode=TwoWay}" 
                                         Margin="3"
-                                        Grid.Row="9" Grid.Column="1" />
+                                        Grid.Row="13" Grid.Column="1" />
 
                 <TextBlock Margin="3"
-                           Grid.Row="10" 
+                           Grid.Row="14" 
                            Text ="FlowDirection" />
                 <ComboBox SelectedItem="{Binding FlowDirection,Mode=TwoWay}"      
                           Margin="3"
-                          Grid.Row="10" Grid.Column="1" >
+                          Grid.Row="14" Grid.Column="1" >
                     <FlowDirection>LeftToRight</FlowDirection>
                     <FlowDirection>RightToLeft</FlowDirection>
                 </ComboBox>

@@ -12,7 +12,7 @@ namespace CarouselDemo
         #region Private variables
 
         private ObservableCollection<CarouselModel> itemsCollection;
-        private double radiusX = 300;
+        private double radiusX = 200;
         private double radiusY = -200;
         private int rotationSpeed = 150;
         private int angle = 0;
@@ -23,10 +23,67 @@ namespace CarouselDemo
         private double opacityFraction=0.8;
         private int skewAngleXFraction = 0;
         private int skewAngleYFraction = 0;
+        private bool opacityEnabled = true;
+        private bool skewAngleXEnabled = true;
+        private bool skewAngleYEnabled = true;
+        private bool scalingEnabled = true;
 
         #endregion
 
         #region Public variabels
+
+        public bool OpacityEnabled
+        {
+            get
+            {
+                return opacityEnabled;
+            }
+            set
+            {
+                opacityEnabled = value;
+                this.RaisePropertyChanged(nameof(OpacityEnabled));
+            }
+        }
+
+        public bool SkewAngleXEnabled
+        {
+            get
+            {
+                return skewAngleXEnabled;
+            }
+            set
+            {
+                skewAngleXEnabled = value;
+                this.RaisePropertyChanged(nameof(SkewAngleXEnabled));
+            }
+        }
+
+        public bool SkewAngleYEnabled
+        {
+            get
+            {
+                return skewAngleYEnabled;
+            }
+            set
+            {
+                skewAngleYEnabled = value;
+                this.RaisePropertyChanged(nameof(SkewAngleYEnabled));
+            }
+        }
+
+        public bool ScalingEnabled
+        {
+            get
+            {
+                return scalingEnabled;
+            }
+            set
+            {
+                scalingEnabled = value;
+                this.RaisePropertyChanged(nameof(ScalingEnabled));
+            }
+        }
+
 
         public ObservableCollection<CarouselModel> ItemsCollection
         {

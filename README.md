@@ -12,8 +12,8 @@ This repository contains the samples that demonstrate the functionalities of Car
  </tr>
  <tr>
   <td><a href="Samples/StandardPath">Scaling & Skewing support in Standard view</a></td>
-  <td><a href="Samples/CustomPath">Rotation & Opacity support in custom view</a></td>
-  <td><a href="Samples/CustomPath">Scaling & Skewing support in custom view</a></td>
+  <td><a href="Samples/CustomPath_customization">Scaling, Skewing, Opacity support for all items in custom view</a></td>
+  <td><a href="Samples/CustomPath">Scaling, Skewing, Rotation & Opacity support for specific items in custom view</a></td>
   <td><a href="Samples/CustomPath">Item per page</a></td>
   <td><a href="Samples/Binding>Change Custom Path</a></td>
   <td><a href="Samples/ItemTemplate">Custom UI using Template</a></td>
